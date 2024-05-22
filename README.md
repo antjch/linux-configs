@@ -1,1 +1,4 @@
 # linux-configs
+
+- .bashrc
+- .vimrc
