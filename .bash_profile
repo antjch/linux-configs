@@ -1,3 +1,2 @@
-if [ -f !/.bashrc ]
-then source ~/.bashrc
-fi
+# Load interactive config
+[[ -r ~/.bashrc ]] && . ~/.bashrc

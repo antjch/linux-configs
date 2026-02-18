@@ -1,0 +1,9 @@
+[[ $- != *i* ]] && return
+
+# -------------------------------------------------------------
+# Aliases + interactive helper functions (LOCAL)
+# -------------------------------------------------------------
+
+ydl()    { command -v yt-dlp >/dev/null 2>&1 || return 127; yt-dlp -o "%(id).32B.%(ext)s" -S "res:720" "$@"; }
+
+ydl_bg() { ydl "$@" & disown; }
