@@ -31,6 +31,9 @@ if [[ ${BASH_SUBSHELL-0} -eq 0 ]] && [[ -z $(trap -p EXIT) ]]; then
   trap 'printf "%sSee you, space cowboy...%s\n" "$_p_red" "$_p_reset"' EXIT
 fi
 
+# Editor
+export EDITOR=${EDITOR:-vim}
+
 # -------------------------------------------------------------
 # History (fast, shared, de-duplicated)
 # -------------------------------------------------------------
@@ -96,9 +99,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Editor
-export EDITOR=${EDITOR:-vim}
 
 # -------------------------------------------------------------
 # Prompt (speed-optimized; Linux /proc fast paths + caching)
